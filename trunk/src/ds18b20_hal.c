@@ -11,7 +11,15 @@ static inline void ds18b20_hal_match_rom(int device_id)
 	if (devices_on_bus == 1){
 		platform_ops.write_byte(DS18B20_COMMAND(SKIP_ROM));
 	}else if (devices_on_bus > 1){
-		platform_ops.match_rom((unsigned char *)devices_roms[hal->device_id]);
+		/*Send MATCH_ROM command*/
+		int i;
+		unsigned char *rom_code = (unsigned char *)&devices_roms[device_id];
+		
+		platform_ops.write_byte(DS18B20_COMMAND(MATCH_ROM));
+		
+		for (i = 0; i < 8; i++){
+			platform_ops.write_byte(rom_code[i]);
+		}
 	}else{
 		return -1;
 	}

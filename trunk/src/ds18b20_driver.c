@@ -4,7 +4,8 @@
 #define ATTACH_FN(p_ds18b20, func_name)		do{(p_ds18b20)->func_name = ds18b20_##func_name;}while(0)				
 #define IS_NEGATIVE(hex_value)				(hex_value & 0xF800)
 #define BIT2VALUE(bit)						positive_bit2value_lookup_table[bit]
-	
+
+
 static float positive_bit2value_lookup_table[] = {
 	0.0625f, /*Bit 0*/
 	0.125f, /*Bit 1*/

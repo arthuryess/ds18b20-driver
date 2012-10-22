@@ -11,6 +11,7 @@
 #include <linux/sched.h>
 #include <linux/delay.h>
 #include <linux/gpio.h>
+#include <linux/slab.h>
 #include <asm/uaccess.h>
 #include "linux_platform_dep.h"
 
