@@ -41,6 +41,16 @@
 #define DS18B20_POWER_SUPPLY_PARASITE		0x0		/*Not supported for now*/
 #define DS18B20_POWER_SUPPLY_EXTERNAL		0x1
 
+/*Reset and Presence timing -- us*/
+#define DS18B20_TIMING(which)				DS18B20_TIMEING_##which
+#define DS18B20_TIMING_RESET_PULSE_MIN				480
+#define DS18B20_TIMING_RESET_PULSE_MAX				960
+#define DS18B20_TIMING_WAIT_MIN						15
+#define DS18B20_TIMING_WAIT_MAX						60
+#define DS18B20_TIMING_PRESENCE_PULSE_MIN			60
+#define DS18B20_TIMING_PRESENCE_PULSE_MAX			240
+#define DS18B20_TIMING_SAMPLE_MIN					30
+#define DS18B20_TIMING_SAMPLE_MAX					60
 
 struct ds18b20_hal_rom{
 	unsigned char crc;

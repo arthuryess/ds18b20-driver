@@ -2,14 +2,6 @@
 #define __DS18B20_DRIVER_H__
 
 #include "ds18b20_hal.h"
-/*Linux kernel headers*/
-#ifdef __KERNEL__
-#include <linux/init.h>
-#include <linux/types.h>
-#else
-/*Debug*/
-#include <stdio.h>
-#endif
 
 #define DS18B20_TEMPERATURE_DATA_MAX_BIT	10
 

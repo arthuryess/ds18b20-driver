@@ -28,6 +28,8 @@ extern ds18b20_hal_t *devices_detected;
 int ds18b20_hal_probe();
 /*Init one ds18b20_hal*/
 int ds18b20_hal_init(ds18b20_hal_t *hal);
+/*Release resources allocated*/
+void ds18b20_hal_remove();
 
 
 #endif /*DS18B20_HAL_H*/
