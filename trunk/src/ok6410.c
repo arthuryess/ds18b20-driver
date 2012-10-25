@@ -1,8 +1,8 @@
-#include "platform_dep.h"
-#include "ds18b20_hal.h"
+#include "ds18b20_driver.h"
 #include <plat/gpio-cfg.h>
 #include <mach/reg-gpio.h>
 
+/*For HAL layer*/
 #define DQ_OUTPUT_MODE()		do{s3c_gpio_cfgpin(S3C64XX_GPE(0), S3C_GPIO_SFN(1));}while(0)
 #define DQ_HIGH()				do{gpio_set_value(S3C64XX_GPE(0), 1);}while(0)
 #define DQ_LOW()				do{gpio_set_value(S3C64XX_GPE(0), 0);}while(0)

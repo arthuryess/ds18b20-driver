@@ -14,6 +14,7 @@ typedef struct platform_operations{
 /*Default platform is OK6410*/
 #ifndef PLATFORM
 #define PLATFORM			PLATFORM_OK6410
+#define PLATFORM_NAME		"ok6410"
 extern struct platform_operations ok6410_ds18b20_ps;
 #define platform_ops		ok6410_ds18b20_ops
 #endif

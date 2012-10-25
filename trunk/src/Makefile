@@ -8,7 +8,7 @@ endif
 
 ifneq($(KERNELRELEASE), )
 	obj-m += ds18b20_dev.o
-	ds18b20_dev-objs = ds18b20_driver.o ds18b20_hal.o $(DS18B20_PLATFORM).o
+	ds18b20_dev-objs = linux_driver.o ds18b20_driver.o ds18b20_hal.o $(DS18B20_PLATFORM).o 
 else
 KERNELDIR	=	$(PREFIX_DIR)/$(KERNEL_DIRNAME)/$(KERNEL_VER)
 all:
